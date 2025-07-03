@@ -1,5 +1,13 @@
 # GNS3 Fat‑Tree OSPF / FRRouting 8.4
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/synloop/gns3-fat-tree-ospf-frr)](https://github.com/synloop/gns3-fat-tree-ospf-frr/releases)
+[![Downloads](https://img.shields.io/github/downloads/synloop/gns3-fat-tree-ospf-frr/total.svg)](https://github.com/synloop/gns3-fat-tree-ospf-frr/releases)
+
+<p align="center">
+  <img src="docs/Topology.png" alt="Full Fat-Tree Topology" width="720">
+</p>
+
 A **k = 4 Clos Fat‑Tree** datacenter topology (20 Debian 12 + FRRouting 8.4 routers + 4 hosts) ready to import in **GNS3**.  The project showcases multi‑area OSPF v2 & v3, ECMP, and IPv4/IPv6 dual‑stack routing.
 
 ---
