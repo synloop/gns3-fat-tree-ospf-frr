@@ -32,7 +32,7 @@ gns3/                   # Lightweight GNS3 project stub (< 100 kB)
 
 - **Google Drive (one‑click)**  – [ fat‑tree‑frr.gns3project.zip (≈ 80 MB) ](https://drive.google.com/file/d/1lRXQm11yiwaAHLXwQSe6QbnUiOQnN-b6/view?usp=sharing)
 
-- **GitHub Release (versioned)** – [latest release ▶](https://github.com/<YOUR_GH_USERNAME>/gns3-fat-tree-ospf-frr/releases/latest) → grab `fat-tree-frr.gns3project.zip`
+- **GitHub Release (versioned)** – [latest release ▶](https://github.com/synloop/gns3-fat-tree-ospf-frr/releases/latest) → grab `fat-tree-frr.gns3project.zip`
 
 > Both archives contain `project.gns3` **+** all per‑VM QCOW2 disks inside `project-files/qemu/*/hda_disk.qcow2`.
 
