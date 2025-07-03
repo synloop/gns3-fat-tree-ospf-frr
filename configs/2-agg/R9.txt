@@ -1,0 +1,51 @@
+vtysh
+conf t
+ip forwarding
+ipv6 forwarding
+
+interface eth2            
+ ip address 10.100.1.2/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:2::2/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 0
+ no shutdown
+exit
+interface eth3            
+ ip address 10.100.1.6/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:a::2/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 0
+ no shutdown
+exit
+interface eth0            
+ ip address 10.2.0.2/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:15::2/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 2
+ no shutdown
+exit
+interface eth1           
+ ip address 10.2.0.10/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:17::2/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 2
+ no shutdown
+exit
+
+router ospf
+ ospf router-id 9.9.9.9
+ network 10.100.1.0/30 area 0
+ network 10.100.1.4/30 area 0
+ network 10.2.0.0/30  area 2
+ network 10.2.0.8/30  area 2
+exit
+router ospf6
+ ospf6 router-id 9.9.9.9
+exit
+end
+write memory
+###############################################################

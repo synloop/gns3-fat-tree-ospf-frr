@@ -1,0 +1,55 @@
+vtysh
+conf t
+ip forwarding
+ipv6 forwarding
+
+interface eth2           
+ ip address 10.100.3.10/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:8::2/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 0
+ no shutdown
+exit
+interface eth3            
+ ip address 10.100.3.14/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:10::2/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 0
+ no shutdown
+exit
+interface eth0            
+ ip address 10.4.0.6/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:1e::2/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 4
+ no shutdown
+exit
+interface eth1            
+ ip address 10.4.0.14/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:20::2/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 4
+ no shutdown
+exit
+
+router ospf
+ ospf router-id 18.18.18.18
+ network 10.100.3.8/30  area 0
+ network 10.100.3.12/30 area 0
+ network 10.4.0.4/30   area 4
+ network 10.4.0.12/30  area 4
+exit
+router ospf6
+ ospf6 router-id 18.18.18.18
+exit
+end
+write memory
+###############################################################
+
+########################
+#     EDGE  POD-4      #
+########################
