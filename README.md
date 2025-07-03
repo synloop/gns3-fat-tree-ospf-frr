@@ -70,7 +70,7 @@ Naming: **P x – R y** means router *Ry* inside *Pod x*.
 
 ---
 
-##  Requirements
+## Requirements
 
 - GNS3 ≥ 2.2 (local or server)
 - QEMU ≥ 4.2 installed by GNS3
@@ -78,12 +78,12 @@ Naming: **P x – R y** means router *Ry* inside *Pod x*.
 
 ---
 
-## Author
+Author
 
 Yassin El Hakouni – 2025
 
 ---
 
-## License
+License
 
 Distributed under the **MIT License** – see [`LICENSE`](LICENSE).
