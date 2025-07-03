@@ -16,7 +16,7 @@ configs/                # All copy‑paste router & host configs
 docs/                   # Diagrams & report
  ├─ Topology.png        # Overview diagram
  ├─ Topology_Plan.pdf   # Address‑plan table
- └─ OSPF_report.pdf     # 15‑page lab report (FR/EN)
+ └─ OSPF_report.pdf     # 15‑page lab report (EN)
 
 gns3/                   # Lightweight GNS3 project stub (< 100 kB)
  └─ project.gns3        # References the external QCOW2 disks
