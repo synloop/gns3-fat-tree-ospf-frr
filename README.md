@@ -65,8 +65,8 @@ Naming: **P x – R y** means router *Ry* inside *Pod x*.
 | File                   | What’s inside                                      |
 | ---------------------- | -------------------------------------------------- |
 | **Topology.png**       | Single‑page diagram with areas and links           |
-| **Topology\_Plan.pdf** | Exhaustive address/IF table (20 routers + 4 hosts) |
-| **OSPF\_report.pdf**   | Step‑by‑step lab report (23 pages, FR)             |
+| **Topology\_Plan.pdf** | Exhaustive address table (20 routers + 4 hosts)    |
+| **OSPF\_report.pdf**   | Step‑by‑step lab report                            |
 
 ---
 
