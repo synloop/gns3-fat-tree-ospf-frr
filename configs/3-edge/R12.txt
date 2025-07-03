@@ -1,0 +1,47 @@
+vtysh
+conf t
+ip forwarding
+ipv6 forwarding
+
+interface eth1            
+ ip address 10.2.0.9/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:17::1/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 2
+ no shutdown
+exit
+interface eth2            
+ ip address 10.2.0.13/30
+ ip ospf network point-to-point
+ ipv6 address 2001:db8:0:18::1/64
+ ipv6 ospf6 network point-to-point
+ ipv6 ospf6 area 2
+ no shutdown
+exit
+interface eth0            
+ ip address 192.168.22.1/24
+ ip ospf passive
+ ipv6 address 2001:db8:1:22::1/64
+ ipv6 ospf6 area 2
+ ipv6 ospf6 passive
+ no shutdown
+exit
+
+router ospf
+ ospf router-id 12.12.12.12
+ network 10.2.0.8/30  area 2
+ network 10.2.0.12/30 area 2
+ network 192.168.22.0/24 area 2
+ passive-interface eth0
+exit
+router ospf6
+ ospf6 router-id 12.12.12.12
+exit
+end
+write memory
+###############################################################
+
+########################
+#     AGG  POD-3       #
+########################
